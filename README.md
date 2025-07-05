@@ -15,4 +15,17 @@ Do more with auto-retry. Specify percentages, make it work for new bests, and mo
 ---
 
 ## About
-The *Advanced Auto Retry* mod changes the behavior for Geometry Dash's vanilla "Auto Retry" game setting. It allows the player to add
+The *Advanced Auto Retry* mod changes the behavior for Geometry Dash's vanilla "Auto Retry" game setting. It allows the player to add certain conditions the auto-retry feature for reaching a certain percentage or a new best.
+
+---
+
+### Configuration
+A button will appear on the right-hand side of the pause menu that creates a pop-up of the mod's settings to allow you to change the settings while in the level.
+
+### Changelog
+###### What's new?!
+**[📜 View the latest updates and patches](./changelog.md)**
+
+### Issues
+###### What's wrong?!
+**[⚠️ Report a problem with the mod](../../issues/)**
