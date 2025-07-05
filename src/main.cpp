@@ -7,23 +7,28 @@
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/PauseLayer.hpp>
 
+#include <Geode/binding/PlayLayer.hpp>
+#include <Geode/binding/PauseLayer.hpp>
 #include <Geode/binding/GameManager.hpp>
 #include <Geode/binding/PlayerObject.hpp>
 
 using namespace geode::prelude;
 
+// it's modding time :3
 auto getThisMod = getMod();
 
 class $modify(MyPlayLayer, PlayLayer) {
+    // modify destroyPlayer to make the mod work
     void destroyPlayer(PlayerObject * player, GameObject * object) {
         auto gameManager = GameManager::get();
+        bool enableMod = getThisMod->getSettingValue<bool>("enable");
 
         // check for auto retry in vanilla settings
         bool isAutoRetry = gameManager->getGameVariable("0026");
 
-        if (isAutoRetry) {
+        if (isAutoRetry && enableMod) {
             // percent threshold
-            int64_t normalPercent = getThisMod->getSettingValue<int64_t>("normal-mode");
+            int normalPercent = as<int>(getThisMod->getSettingValue<int64_t>("normal-mode"));
 
             // conditions
             bool newBestEnabled = getThisMod->getSettingValue<bool>("new-best"); // only disable auto retry on new best
@@ -77,7 +82,7 @@ class $modify(MyPlayLayer, PlayLayer) {
                 PlayLayer::destroyPlayer(player, object);
             };
         } else {
-            log::error("Player has auto retry disabled in vanilla settings");
+            log::error("Player has auto retry disabled in vanilla or mod settings");
             PlayLayer::destroyPlayer(player, object);
         };
     };
@@ -87,6 +92,7 @@ class $modify(MyPauseLayer, PauseLayer) {
     void customSetup() {
         PauseLayer::customSetup();
 
+        // set up the advanced auto retry button
         if (PlayLayer::get()->m_levelSettings->m_platformerMode) {
             log::error("Level is a platformer");
         } else {

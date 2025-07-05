@@ -29,6 +29,12 @@
 		"url": "https://www.github.com/BlueWitherer/AdvancedAutoRetry/issues/"
 	},
 	"settings": {
+		"enable": {
+			"type": "bool",
+			"name": "Enable",
+			"description": "Make the mod work.",
+			"default": true
+		},
 		"normal-mode": {
 			"type": "int",
 			"name": "Minimum Percentage",
@@ -44,7 +50,8 @@
 				"arrow-step": 10,
 				"big-arrows": true,
 				"big-arrow-step": 25
-			}
+			},
+			"enable-if": "enable"
 		},
 		"toggles": {
 			"type": "title",
@@ -55,13 +62,15 @@
 			"name": "On New Best",
 			"description": "Disable auto-retry when reaching a new best percentage in normal mode. <cr>This will override the manual percentage setting.</c>",
 			"type": "bool",
-			"default": false
+			"default": false,
+			"enable-if": "enable"
 		},
 		"start-pos": {
 			"name": "Include Testmode",
 			"description": "Disable auto-retry conditionally even when playing from a Start Pos.",
 			"type": "bool",
-			"default": false
+			"default": false,
+			"enable-if": "enable"
 		}
 	}
 }
