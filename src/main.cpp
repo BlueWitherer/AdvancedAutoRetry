@@ -93,25 +93,27 @@ class $modify(MyPauseLayer, PauseLayer) {
         PauseLayer::customSetup();
 
         // set up the advanced auto retry button
-        if (PlayLayer::get()->m_levelSettings->m_platformerMode) {
+        if (PlayLayer::get()->m_isPlatformer) {
             log::error("Level is a platformer");
         } else {
-            auto rightMenu = this->getChildByID("right-button-menu");
+            if (auto rightMenu = this->getChildByID("right-button-menu")) {
+                // mod settings button sprite
+                auto autoRetryModBtnSprite = CCSprite::createWithSpriteFrameName("GJ_getSongInfoBtn_001.png");
+                autoRetryModBtnSprite->setScale(0.75f);
 
-            // mod settings button sprite
-            auto autoRetryModBtnSprite = CCSprite::createWithSpriteFrameName("GJ_getSongInfoBtn_001.png");
-            autoRetryModBtnSprite->setScale(0.75f);
+                // create mod settings button
+                auto autoRetryModBtn = CCMenuItemSpriteExtra::create(
+                    autoRetryModBtnSprite,
+                    this,
+                    menu_selector(MyPauseLayer::onAdvAutoRetry)
+                );
+                autoRetryModBtn->setID("settings-button"_spr);
 
-            // create mod settings button
-            auto autoRetryModBtn = CCMenuItemSpriteExtra::create(
-                autoRetryModBtnSprite,
-                this,
-                menu_selector(MyPauseLayer::onAdvAutoRetry)
-            );
-            autoRetryModBtn->setID("settings-button"_spr);
-
-            rightMenu->addChild(autoRetryModBtn);
-            rightMenu->updateLayout();
+                rightMenu->addChild(autoRetryModBtn);
+                rightMenu->updateLayout();
+            } else {
+                log::error("Failed to get right button menu");
+            };
         };
     };
 
