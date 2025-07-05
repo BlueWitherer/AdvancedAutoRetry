@@ -9,6 +9,9 @@ Adds more customization to auto-retry!
 
 Do more with auto-retry. Specify percentages, make it work for new bests, and more!
 
+> [!TIP]
+> *This mod has settings you can utilize to customize your experience.*
+
 ---
 
 ## About
