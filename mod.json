@@ -1,0 +1,67 @@
+{
+	"geode": "4.6.3",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "cheeseworks.advancedautoretry",
+	"name": "Advanced Auto Retry",
+	"version": "v1.0.0",
+	"developers": [
+		"Cheeseworks"
+	],
+	"description": "Adds more customization to auto-retry!",
+	"tags": [
+		"offline",
+		"gameplay",
+		"enhancement"
+	],
+	"early-load": false,
+	"links": {
+		"source": "https://www.github.com/BlueWitherer/AdvancedAutoRetry/",
+		"homepage": "https://avalanche.cubicstudios.xyz/",
+		"community": "https://www.dsc.gg/cubic"
+	},
+	"issues": {
+		"info": "Report issues to my GitHub repository!",
+		"url": "https://www.github.com/BlueWitherer/AdvancedAutoRetry/issues/"
+	},
+	"settings": {
+		"normal-mode": {
+			"type": "int",
+			"name": "Minimum Percentage",
+			"description": "Toggle auto-retry after reaching this percentage in normal mode.",
+			"min": 1,
+			"max": 99,
+			"default": 50,
+			"control": {
+				"input": true,
+				"slider": true,
+				"slider-step": 1,
+				"arrows": true,
+				"arrow-step": 10,
+				"big-arrows": true,
+				"big-arrow-step": 25
+			}
+		},
+		"toggles": {
+			"type": "title",
+			"name": "Conditions",
+			"description": "The conditions under which the mod should work."
+		},
+		"new-best": {
+			"name": "On New Best",
+			"description": "Disable auto-retry when reaching a new best percentage in normal mode. <cr>This will override the manual percentage setting.</c>",
+			"type": "bool",
+			"default": false
+		},
+		"start-pos": {
+			"name": "Include Testmode",
+			"description": "Disable auto-retry conditionally even when playing from a Start Pos.",
+			"type": "bool",
+			"default": false
+		}
+	}
+}
