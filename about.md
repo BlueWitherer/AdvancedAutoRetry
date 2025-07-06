@@ -17,4 +17,4 @@ The *Advanced Auto Retry* mod changes the behavior for Geometry Dash's vanilla "
 ### Configuration
 A button will appear on the right-hand side of the pause menu that creates a pop-up of the mod's settings to allow you to change the settings while in the level.
 
-> ![icon](frame:GJ_infoIcon_001.png?scale=0.875) <cj>*There may be levels with inactive start positions that unintentionally cause the mod to work differently. To fix this, simply enable the `Include Testmode` setting.*</c>
+> ![icon](frame:GJ_infoIcon_001.png?scale=0.5) <cj>*There may be levels with inactive start positions that unintentionally cause the mod to work differently. To fix this, simply enable the `Include Testmode` setting.*</c>
