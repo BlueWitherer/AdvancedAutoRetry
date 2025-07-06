@@ -2,6 +2,7 @@
 
 #include <Geode/ui/GeodeUI.hpp>
 
+#include <Geode/utils/NodeIDs.hpp>
 #include <Geode/utils/terminate.hpp>
 
 #include <Geode/modify/PlayLayer.hpp>

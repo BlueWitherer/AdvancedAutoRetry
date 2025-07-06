@@ -8,17 +8,17 @@
 	},
 	"id": "cheeseworks.advancedautoretry",
 	"name": "Advanced Auto Retry",
+	"description": "Adds more customization to auto-retry!",
 	"version": "1.0.2",
 	"developers": [
 		"Cheeseworks"
 	],
-	"description": "Adds more customization to auto-retry!",
+	"early-load": false,
 	"tags": [
 		"offline",
 		"gameplay",
 		"enhancement"
 	],
-	"early-load": false,
 	"links": {
 		"source": "https://www.github.com/BlueWitherer/AdvancedAutoRetry/",
 		"homepage": "https://avalanche.cubicstudios.xyz/",
@@ -27,6 +27,12 @@
 	"issues": {
 		"info": "Report issues to my GitHub repository!",
 		"url": "https://www.github.com/BlueWitherer/AdvancedAutoRetry/issues/"
+	},
+	"dependencies": {
+		"geode.node-ids": {
+			"importance": "required",
+			"version": ">=1.21.0"
+		}
 	},
 	"settings": {
 		"enable": {

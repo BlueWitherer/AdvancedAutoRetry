@@ -26,6 +26,8 @@ A button will appear on the right-hand side of the pause menu that creates a pop
 >
 > *There may be levels with inactive start positions that unintentionally cause the mod to work differently. To fix this, simply enable the `Include Testmode` setting.*
 
+---
+
 ### Changelog
 ###### What's new?!
 **[📜 View the latest updates and patches](./changelog.md)**
