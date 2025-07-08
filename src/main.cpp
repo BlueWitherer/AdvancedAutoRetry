@@ -35,7 +35,7 @@ class $modify(MyPlayLayer, PlayLayer) {
             bool newBestEnabled = getThisMod->getSettingValue<bool>("new-best"); // only disable auto retry on new best
             bool startPosEnabled = getThisMod->getSettingValue<bool>("start-pos"); // allow disable auto retry on testmode
 
-            int currentPercent = this->getCurrentPercentInt();
+            int currentPercent = getCurrentPercentInt();
             bool shouldDisableAutoRetry = false;
 
             // check for classic
@@ -97,7 +97,7 @@ class $modify(MyPauseLayer, PauseLayer) {
         if (PlayLayer::get()->m_isPlatformer) {
             log::error("Level is a platformer");
         } else {
-            if (auto rightMenu = this->getChildByID("right-button-menu")) {
+            if (auto rightMenu = getChildByID("right-button-menu")) {
                 // mod settings button sprite
                 auto autoRetryModBtnSprite = CCSprite::createWithSpriteFrameName("GJ_getSongInfoBtn_001.png");
                 autoRetryModBtnSprite->setScale(0.75f);
