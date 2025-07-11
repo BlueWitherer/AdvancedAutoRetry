@@ -1,4 +1,5 @@
 # v1.0.3
+- Minor code cleanup
 
 # v1.0.2
 - Use *Node IDs*
