@@ -9,11 +9,10 @@
 	"id": "cheeseworks.advancedautoretry",
 	"name": "Advanced Auto Retry",
 	"description": "Adds more customization to auto-retry!",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"developers": [
 		"Cheeseworks"
 	],
-	"early-load": false,
 	"tags": [
 		"offline",
 		"gameplay",
@@ -78,5 +77,6 @@
 			"default": false,
 			"enable-if": "enable"
 		}
-	}
+	},
+	"early-load": false
 }
